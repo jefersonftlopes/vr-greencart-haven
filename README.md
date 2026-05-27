@@ -58,7 +58,7 @@ Conforme o PDF do desafio, foi solicitado:
 
 ### Instalação
 ```bash
-git clone <repo-url>
+git clone https://github.com/jefersonftlopes/vr-greencart-haven.git
 cd vr-greencart-haven
 pnpm install
 ```
