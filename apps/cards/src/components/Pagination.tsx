@@ -50,8 +50,6 @@ export function Pagination({
 
       {pages.map((p, idx) =>
         p === "..." ? (
-          // chave inclui posição relativa para o React reconciliar quando
-          // a posição da ellipsis muda entre páginas
           <span key={`ellipsis-${idx === 1 ? "L" : "R"}`} className="px-1 text-sm text-ink-muted">
             …
           </span>

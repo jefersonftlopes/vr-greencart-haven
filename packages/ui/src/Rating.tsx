@@ -2,21 +2,13 @@ import { Star } from "lucide-react";
 import { cn } from "./cn";
 
 interface RatingProps {
-  /** Avaliação entre 0 e 5 (suporta meio ponto). */
   value: number;
-  /** Quantidade de reviews para exibir entre parênteses. */
   count?: number;
-  /** Tamanho das estrelas em px (default: 14). */
   size?: number;
-  /** Esconde o número da nota ao lado das estrelas. */
   hideValue?: boolean;
   className?: string;
 }
 
-/**
- * Exibe nota em estrelas (5 max). Cada estrela renderiza preenchida,
- * metade-preenchida (via clip) ou vazia com base no `value`.
- */
 export function Rating({
   value,
   count,
@@ -25,7 +17,7 @@ export function Rating({
   className,
 }: RatingProps) {
   const normalized = Math.max(0, Math.min(5, value));
-  const rounded = Math.round(normalized * 2) / 2; // arredonda para 0.5
+  const rounded = Math.round(normalized * 2) / 2;
   const label = count !== undefined
     ? `${normalized.toFixed(2)} de 5 (${count} avaliações)`
     : `${normalized.toFixed(2)} de 5`;

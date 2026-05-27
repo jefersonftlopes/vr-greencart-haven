@@ -8,7 +8,6 @@ import {
   useAppSelector,
 } from "@greencart/store";
 
-/** UserId default da DummyJSON Carts API — sem autenticação no escopo do teste. */
 const DEFAULT_USER_ID = 1;
 
 export function useCheckout(onOrderPlaced: (orderId: number) => void) {

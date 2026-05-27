@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-/**
- * Showcase visual de categorias — idêntico ao Figma.
- * Não filtra produtos: o filtro real (por categoria DummyJSON) vive
- * dentro do FilterDrawer do remote Cards.
- */
 const CATEGORIES = [
   {
     slug: "vegetables",
@@ -82,7 +77,6 @@ export function Categories() {
         })}
       </div>
 
-      {/* Pagination dots — visual da referência */}
       <div className="mt-6 flex justify-center gap-2">
         {[0, 1, 2, 3].map((i) => (
           <span

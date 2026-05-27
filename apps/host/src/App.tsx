@@ -18,7 +18,6 @@ export default function App() {
           </Suspense>
         </RemoteBoundary>
 
-        {/* Live region acessível para anúncios do carrinho */}
         <div
           role="status"
           aria-live="polite"

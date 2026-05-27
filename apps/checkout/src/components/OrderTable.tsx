@@ -18,10 +18,6 @@ interface OrderItemListProps {
   items: CartItemData[];
 }
 
-/**
- * Lista de itens do pedido como cards (responsivo).
- * Cada card tem: thumb, título, preço, controles de quantidade e remover.
- */
 export function OrderTable({ items }: OrderItemListProps) {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();

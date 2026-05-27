@@ -8,9 +8,6 @@ import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { CartButton } from "./components/CartButton";
 import { CartDrawer } from "./components/CartDrawer";
 
-// URL absoluta ancorada na localização do módulo Header — funciona tanto
-// standalone (http://localhost:3001) quanto via MF (carregado pelo host :3000),
-// pois é resolvida no runtime contra a origem real do remote.
 const groceryLogo = new URL("./assets/grocery-logo.png", import.meta.url).href;
 
 const NAV_KEYS = ["home", "about", "service", "product", "contact"] as const;
@@ -47,7 +44,6 @@ export default function Header() {
       goHome(e);
       return;
     }
-    // Outras seções: garante home e faz scroll para âncora se existir
     if (location.pathname !== "/") {
       navigate("/");
     }

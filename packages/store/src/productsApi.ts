@@ -74,7 +74,6 @@ export const productsApi = createApi({
   }),
 });
 
-// Exports explícitos para sobreviver ao shared module wrapper do MF.
 export const useGetProductsQuery = productsApi.useGetProductsQuery;
 export const useGetCategoriesQuery = productsApi.useGetCategoriesQuery;
 export const useGetCategoriesFullQuery = productsApi.useGetCategoriesFullQuery;

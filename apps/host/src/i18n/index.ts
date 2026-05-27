@@ -16,7 +16,6 @@ if (!i18next.isInitialized) {
   });
 }
 
-// Sincroniza i18next com o Redux store (cross-remote).
 let currentLang = selectLanguage(store.getState());
 store.subscribe(() => {
   const lang = selectLanguage(store.getState());

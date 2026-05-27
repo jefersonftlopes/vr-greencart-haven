@@ -66,8 +66,6 @@ const cartSlice = createSlice({
   },
 });
 
-// Exports explícitos (não destructuring) — necessário para o wrapper
-// shared do Module Federation preservar todas as bindings.
 export const addToCart = cartSlice.actions.addToCart;
 export const removeFromCart = cartSlice.actions.removeFromCart;
 export const updateQuantity = cartSlice.actions.updateQuantity;

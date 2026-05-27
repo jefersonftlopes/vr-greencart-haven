@@ -10,7 +10,6 @@ export function FeaturedBanners() {
       </h2>
 
       <div className="grid gap-4 md:grid-cols-[minmax(0,42%)_1fr]">
-        {/* BIG SALE — Fresh Vegetables (mostarda, vertical, centralizado) */}
         <div className="relative flex min-h-[300px] flex-col items-center justify-start overflow-hidden rounded-lg bg-banner-mustard p-6 text-center md:min-h-[420px]">
           <span className="text-[11px] font-semibold uppercase tracking-wider text-ink">
             {t("banners.freshVegetables")}
@@ -27,9 +26,7 @@ export function FeaturedBanners() {
           />
         </div>
 
-        {/* Coluna direita: SUPER SALE em cima, 20% DISCOUNT embaixo */}
         <div className="grid gap-4">
-          {/* SUPER SALE — Fresh Fruit (pink) */}
           <div className="relative flex min-h-[200px] items-center overflow-hidden rounded-lg bg-brand-pink px-4 py-4 md:px-6">
             <img
               src="/super-sale.png"
@@ -52,7 +49,6 @@ export function FeaturedBanners() {
             </div>
           </div>
 
-          {/* 20% DISCOUNT — Drinks (orange) */}
           <div className="relative flex min-h-[200px] items-center overflow-hidden rounded-lg bg-brand-orange px-4 py-4 md:px-6">
             <div className="flex shrink-0 flex-col items-center text-center">
               <div className="border-2 border-ink px-5 py-3">

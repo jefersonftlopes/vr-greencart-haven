@@ -20,7 +20,6 @@ const cartPersistConfig = {
   key: "greencart-cart",
   version: 1,
   storage,
-  // Persistimos só os itens e o último pedido. Estado UI (isOpen) não persiste.
   whitelist: ["items", "lastOrderId"],
 };
 
@@ -43,7 +42,6 @@ export function createAppStore() {
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         serializableCheck: {
-          // redux-persist dispara essas actions com payload não serializável
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
       }).concat(productsApi.middleware),
@@ -52,11 +50,6 @@ export function createAppStore() {
   return store;
 }
 
-/**
- * Singleton store compartilhado entre host e remotes via Module Federation.
- * Como `@greencart/store` é `singleton: true` no MF, todos os apps
- * em runtime carregam a MESMA instância — fonte única de verdade.
- */
 export const store = createAppStore();
 export const persistor = persistStore(store);
 

@@ -42,7 +42,6 @@ export function ReviewsModal({ open, onOpenChange, product }: ReviewsModalProps)
       title={t("reviews.title", "Avaliações")}
       description={product.title}
     >
-      {/* Resumo */}
       <div className="flex items-center gap-4 border-b border-gray-100 px-6 py-4">
         <div className="text-center">
           <p className="text-3xl font-extrabold text-ink">
@@ -61,7 +60,6 @@ export function ReviewsModal({ open, onOpenChange, product }: ReviewsModalProps)
         </div>
       </div>
 
-      {/* Lista */}
       {reviews.length === 0 ? (
         <div className="flex flex-col items-center justify-center gap-3 p-10 text-center">
           <MessageSquareText className="h-10 w-10 text-gray-300" />

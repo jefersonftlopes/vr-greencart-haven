@@ -12,10 +12,6 @@ interface ModalProps {
   description?: ReactNode;
   children: ReactNode;
   className?: string;
-  /**
-   * "drawer" (default) → slide-in lateral à direita, full-height
-   * "center" → modal centralizado, max-w-lg, max-h-90vh
-   */
   variant?: ModalVariant;
 }
 

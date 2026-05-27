@@ -17,7 +17,6 @@ export default function ProductCard({ product }: ProductCardProps) {
   const handleAdd = () => {
     dispatch(addToCart(product));
     dispatch(openCart());
-    // Anuncia para leitores de tela (live region renderizado no host App)
     const liveRegion = document.getElementById("cart-live-region");
     if (liveRegion) {
       liveRegion.textContent = `${product.title} ${t(
@@ -33,7 +32,6 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <>
       <article className="group relative flex flex-col items-center rounded-md border border-brand/40 bg-white p-3 pt-9 text-center transition-shadow hover:border-brand hover:shadow-md">
-        {/* Rating clicável no canto superior direito → abre modal de reviews */}
         <button
           type="button"
           onClick={() => setReviewsOpen(true)}

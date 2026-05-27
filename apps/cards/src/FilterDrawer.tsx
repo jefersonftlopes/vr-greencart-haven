@@ -46,7 +46,6 @@ export function FilterDrawer({ open, onClose }: FilterDrawerProps) {
       description={t('products.filtersDescription')}
     >
       <div className="flex flex-col gap-6 p-6">
-        {/* Category filter */}
         <div>
           <p className="mb-3 text-sm font-semibold text-ink">{t('products.category')}</p>
           {loadingCats ? (
@@ -88,7 +87,6 @@ export function FilterDrawer({ open, onClose }: FilterDrawerProps) {
           )}
         </div>
 
-        {/* Sort by */}
         <div>
           <p className="mb-3 text-sm font-semibold text-ink">{t('products.sortBy')}</p>
           <div className="flex flex-wrap gap-2">
@@ -109,7 +107,6 @@ export function FilterDrawer({ open, onClose }: FilterDrawerProps) {
           </div>
         </div>
 
-        {/* Sort order */}
         <div>
           <p className="mb-3 text-sm font-semibold text-ink">{t('products.sortOrder')}</p>
           <div className="flex gap-3">
