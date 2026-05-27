@@ -45,4 +45,12 @@
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; }
+
+  /* Tailwind 4 removeu o cursor: pointer default em elementos interativos.
+     Restauramos para manter o feedback visual esperado pelo usuário. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
 }
