@@ -4,6 +4,7 @@ import type { Product } from "@greencart/types";
 import { addToCart, openCart, useAppDispatch } from "@greencart/store";
 import { Button, Rating } from "@greencart/ui";
 import { ReviewsModal } from "./components/ReviewsModal";
+import { DEFAULT_WEIGHT_LABEL } from "./constants/product";
 
 interface ProductCardProps {
   product: Product;
@@ -26,7 +27,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     }
   };
 
-  const weight = product.weight ? `${product.weight}kg` : "1kg";
+  const weight = product.weight ? `${product.weight}kg` : DEFAULT_WEIGHT_LABEL;
   const reviewsCount = product.reviews?.length ?? 0;
 
   return (

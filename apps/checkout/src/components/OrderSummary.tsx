@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Lock } from 'lucide-react';
 import { Button } from '@greencart/ui';
+import { SHIPPING_FEE, SHIPPING_FREE_THRESHOLD } from '../constants/checkout';
 
 interface OrderSummaryProps {
   subtotal: number;
@@ -9,11 +10,9 @@ interface OrderSummaryProps {
   onConfirm: () => void;
 }
 
-const SHIPPING_FREE_THRESHOLD = 50;
-
 export function OrderSummary({ subtotal, itemsCount, isLoading, onConfirm }: OrderSummaryProps) {
   const { t } = useTranslation();
-  const shipping = subtotal >= SHIPPING_FREE_THRESHOLD || subtotal === 0 ? 0 : 9.9;
+  const shipping = subtotal >= SHIPPING_FREE_THRESHOLD || subtotal === 0 ? 0 : SHIPPING_FEE;
   const total = subtotal + shipping;
 
   return (

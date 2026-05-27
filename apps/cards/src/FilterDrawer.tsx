@@ -10,26 +10,13 @@ import {
   useAppSelector,
   useGetCategoriesFullQuery,
 } from '@greencart/store';
-import type { SortByField, SortOrder } from '@greencart/store';
 import { Button, Modal, Skeleton } from '@greencart/ui';
+import { ORDER_OPTIONS, SORT_OPTIONS } from './constants/filters';
 
 interface FilterDrawerProps {
   open: boolean;
   onClose: () => void;
 }
-
-const SORT_OPTIONS: Array<{ value: SortByField; key: string }> = [
-  { value: 'title', key: 'title' },
-  { value: 'price', key: 'price' },
-  { value: 'rating', key: 'rating' },
-  { value: 'stock', key: 'stock' },
-  { value: 'discountPercentage', key: 'discountPercentage' },
-];
-
-const ORDER_OPTIONS: Array<{ value: SortOrder; key: string }> = [
-  { value: 'asc', key: 'asc' },
-  { value: 'desc', key: 'desc' },
-];
 
 export function FilterDrawer({ open, onClose }: FilterDrawerProps) {
   const { t } = useTranslation();

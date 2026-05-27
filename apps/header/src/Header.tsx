@@ -7,10 +7,9 @@ import { useCart } from "./hooks/useCart";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { CartButton } from "./components/CartButton";
 import { CartDrawer } from "./components/CartDrawer";
+import { NAV_KEYS } from "./constants/nav";
 
 const groceryLogo = new URL("./assets/grocery-logo.png", import.meta.url).href;
-
-const NAV_KEYS = ["home", "about", "service", "product", "contact"] as const;
 
 export default function Header() {
   const { t } = useTranslation();

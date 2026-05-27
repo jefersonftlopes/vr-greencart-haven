@@ -5,8 +5,9 @@ import {
   useGetProductsByCategoryQuery,
   useGetProductsQuery,
 } from "@greencart/store";
+import { PAGE_SIZE } from "../constants/filters";
 
-export const PAGE_SIZE = 12;
+export { PAGE_SIZE };
 
 export function useProductList() {
   const { category, sortBy, order } = useAppSelector(selectFilters);
