@@ -1,0 +1,33 @@
+{
+  "checkout": {
+    "title": "Checkout",
+    "subtitle": "Review your items before placing the order",
+    "backToHome": "Continue shopping",
+    "yourItems": "Your items",
+    "orderSummary": "Order Summary",
+    "product": "Product",
+    "qty": "Qty",
+    "unit": "Unit",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "freeShipping": "Free",
+    "discount": "Discount",
+    "orderTotal": "Total",
+    "placeOrder": "Place Order",
+    "placingOrder": "Processing…",
+    "orderError": "Failed to place order. Please try again.",
+    "emptyCart": "Your cart is empty.",
+    "emptyCartMessage": "Add some products before checking out.",
+    "remove": "Remove",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "each": "each",
+    "items_one": "{{count}} item",
+    "items_other": "{{count}} items",
+    "secureCheckout": "Secure checkout",
+    "orderSuccess": "Order placed!",
+    "orderId": "Order",
+    "orderSuccessMessage": "Thank you for your purchase. You will receive a confirmation shortly.",
+    "continueShopping": "Continue Shopping"
+  }
+}

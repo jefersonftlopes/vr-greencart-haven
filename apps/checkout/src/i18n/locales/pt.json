@@ -1,0 +1,33 @@
+{
+  "checkout": {
+    "title": "Finalizar Pedido",
+    "subtitle": "Confira seus itens antes de concluir a compra",
+    "backToHome": "Continuar comprando",
+    "yourItems": "Seus itens",
+    "orderSummary": "Resumo do Pedido",
+    "product": "Produto",
+    "qty": "Qtd",
+    "unit": "Unitário",
+    "subtotal": "Subtotal",
+    "shipping": "Frete",
+    "freeShipping": "Grátis",
+    "discount": "Desconto",
+    "orderTotal": "Total",
+    "placeOrder": "Confirmar Pedido",
+    "placingOrder": "Processando…",
+    "orderError": "Falha ao realizar o pedido. Tente novamente.",
+    "emptyCart": "Seu carrinho está vazio.",
+    "emptyCartMessage": "Adicione produtos antes de finalizar a compra.",
+    "remove": "Remover",
+    "decrease": "Diminuir quantidade",
+    "increase": "Aumentar quantidade",
+    "each": "cada",
+    "items_one": "{{count}} item",
+    "items_other": "{{count}} itens",
+    "secureCheckout": "Pagamento seguro",
+    "orderSuccess": "Pedido realizado!",
+    "orderId": "Pedido",
+    "orderSuccessMessage": "Obrigado pela sua compra. Você receberá uma confirmação em breve.",
+    "continueShopping": "Continuar Comprando"
+  }
+}
