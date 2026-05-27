@@ -11,7 +11,7 @@ import {
   useGetCategoriesFullQuery,
 } from '@greencart/store';
 import { Button, Modal, Skeleton } from '@greencart/ui';
-import { ORDER_OPTIONS, SORT_OPTIONS } from './constants/filters';
+import { ORDER_OPTIONS, SORT_OPTIONS } from '../constants/filters';
 
 interface FilterDrawerProps {
   open: boolean;

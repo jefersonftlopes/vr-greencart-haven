@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { SlidersHorizontal } from "lucide-react";
 import { Skeleton } from "@greencart/ui";
 import ProductCard from "./ProductCard";
-import { FilterDrawer } from "./FilterDrawer";
+import { FilterDrawer } from "./components/FilterDrawer";
 import { Pagination } from "./components/Pagination";
 import { PAGE_SIZE, useProductList } from "./hooks/useProductList";
 
