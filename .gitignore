@@ -1,0 +1,20 @@
+node_modules
+dist
+.DS_Store
+*.log
+.env
+.env.local
+coverage
+.vite
+.turbo
+.mf
+@mf-types
+
+# IDE / tooling
+.claude
+.idea
+.vscode
+*.swp
+
+# OS
+Thumbs.db
