@@ -1,12 +1,17 @@
 import "./i18n";
 import { useState } from "react";
-import { Menu, ShoppingCart, User, X } from "lucide-react";
+import { Menu, User, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useCart } from "./hooks/useCart";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { CartButton } from "./components/CartButton";
 import { CartDrawer } from "./components/CartDrawer";
+
+// URL absoluta ancorada na localização do módulo Header — funciona tanto
+// standalone (http://localhost:3001) quanto via MF (carregado pelo host :3000),
+// pois é resolvida no runtime contra a origem real do remote.
+const groceryLogo = new URL("./assets/grocery-logo.png", import.meta.url).href;
 
 const NAV_KEYS = ["home", "about", "service", "product", "contact"] as const;
 
@@ -66,9 +71,14 @@ export default function Header() {
           aria-label="GreenCart"
           className="flex items-center font-display text-base font-bold text-brand"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-white">
-            <ShoppingCart className="h-5 w-5" />
-          </span>
+          <img
+            src={groceryLogo}
+            alt="GreenCart"
+            width={40}
+            height={40}
+            className="h-10 w-10 object-contain"
+            decoding="async"
+          />
         </Link>
 
         <nav
