@@ -9,6 +9,8 @@ coverage
 .turbo
 .mf
 @mf-types
+vite.config.ts.timestamp-*.mjs
+vite.config.*.timestamp-*.mjs
 
 # IDE / tooling
 .claude
