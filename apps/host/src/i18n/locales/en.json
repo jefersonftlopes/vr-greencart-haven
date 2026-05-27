@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "titleLine1": "Healthy and Fresh",
+    "titleLine2": "Grocery",
+    "description": "We pride ourselves on providing a curated selection of the finest, nutrient-rich products that cater to your health-conscious lifestyle.",
+    "cta": "Learn More"
+  },
+  "sections": {
+    "categories": "Category",
+    "featured": "Featured Products",
+    "featuredProducts": "Featured Products",
+    "allProducts": "All Products",
+    "all": "All"
+  },
+  "category": {
+    "vegetables": "Vegetables",
+    "fruits": "Fruits",
+    "drinks": "Drinks",
+    "nuts": "Fresh Nuts",
+    "fish": "Fresh Fish",
+    "meat": "Meat"
+  },
+  "banners": {
+    "freshVegetables": "Fresh Vegetables",
+    "bigSale": "BIG SALE",
+    "freshFruit": "Fresh Fruit",
+    "superSale": "SUPER SALE",
+    "shopNow": "Shop Now",
+    "upTo": "Up to",
+    "discount": "Discount",
+    "enjoyFreshDrink": "Enjoy your fresh drink"
+  }
+}

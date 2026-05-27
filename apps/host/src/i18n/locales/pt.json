@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "titleLine1": "Alimentos Saudáveis",
+    "titleLine2": "e Frescos",
+    "description": "Orgulhamo-nos de oferecer uma seleção criteriosa dos melhores produtos ricos em nutrientes, voltados ao seu estilo de vida saudável.",
+    "cta": "Saiba Mais"
+  },
+  "sections": {
+    "categories": "Categorias",
+    "featured": "Produtos em Destaque",
+    "featuredProducts": "Produtos em Destaque",
+    "allProducts": "Todos os Produtos",
+    "all": "Todos"
+  },
+  "category": {
+    "vegetables": "Vegetais",
+    "fruits": "Frutas",
+    "drinks": "Bebidas",
+    "nuts": "Castanhas",
+    "fish": "Peixe Fresco",
+    "meat": "Carnes"
+  },
+  "banners": {
+    "freshVegetables": "Vegetais Frescos",
+    "bigSale": "BIG SALE",
+    "freshFruit": "Frutas Frescas",
+    "superSale": "SUPER SALE",
+    "shopNow": "Comprar Agora",
+    "upTo": "Até",
+    "discount": "Desconto",
+    "enjoyFreshDrink": "Aproveite suas bebidas frescas"
+  }
+}
