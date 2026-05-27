@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import type { Product } from "@greencart/types";
 import { addToCart, openCart, useAppDispatch } from "@greencart/store";
-import { Button } from "@greencart/ui";
+import { Button, Rating } from "@greencart/ui";
 
 interface ProductCardProps {
   product: Product;
@@ -22,6 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   const weight = product.weight ? `${product.weight}kg` : "1kg";
+  const reviewsCount = product.reviews?.length ?? 0;
 
   return (
     <article className="group flex flex-col items-center rounded-md border border-brand/40 bg-white p-3 text-center transition-shadow hover:border-brand hover:shadow-md">
@@ -30,6 +31,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           src={product.thumbnail}
           alt={product.title}
           loading="lazy"
+          decoding="async"
           className="h-full w-full object-contain p-2 transition-transform group-hover:scale-105"
         />
       </div>
@@ -41,6 +43,14 @@ export default function ProductCard({ product }: ProductCardProps) {
         {product.title}
       </h3>
       <p className="mt-0.5 text-[11px] text-ink-muted">{weight}</p>
+
+      <Rating
+        value={product.rating}
+        count={reviewsCount || undefined}
+        size={12}
+        className="mt-1"
+      />
+
       <p className="mt-1 text-xs font-semibold text-ink">
         ${product.price.toFixed(2)}
       </p>

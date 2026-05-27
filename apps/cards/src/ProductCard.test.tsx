@@ -17,6 +17,10 @@ const product: Product = {
   stock: 50,
   thumbnail: "https://example.com/tomato.png",
   images: [],
+  reviews: [
+    { rating: 5, comment: "Top", date: "", reviewerName: "A", reviewerEmail: "a@x.com" },
+    { rating: 4, comment: "Bom", date: "", reviewerName: "B", reviewerEmail: "b@x.com" },
+  ],
 };
 
 describe("ProductCard", () => {
@@ -40,5 +44,17 @@ describe("ProductCard", () => {
   it("imagem tem alt acessível com o título", () => {
     renderWithProviders(<ProductCard product={product} />);
     expect(screen.getByAltText("Tomate Cereja")).toBeInTheDocument();
+  });
+
+  it("exibe rating + número de reviews", () => {
+    renderWithProviders(<ProductCard product={product} />);
+    // role=img com aria-label "4.50 de 5 (2 avaliações)"
+    expect(
+      screen.getByRole("img", { name: /4\.50 de 5 \(2 avaliações\)/i }),
+    ).toBeInTheDocument();
+    // valor numérico visível
+    expect(screen.getByText("4.5")).toBeInTheDocument();
+    // contagem de reviews entre parênteses
+    expect(screen.getByText("(2)")).toBeInTheDocument();
   });
 });
