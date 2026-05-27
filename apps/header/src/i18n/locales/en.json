@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "service": "Service",
+    "product": "Product",
+    "contact": "Contact"
+  },
+  "cart": {
+    "title": "My Cart ({{count}})",
+    "empty": "Your cart is empty",
+    "addProductsToStart": "Add products to get started.",
+    "reviewBeforeClose": "Review before closing your order.",
+    "each": "each",
+    "remove": "Remove",
+    "total": "Total",
+    "checkout": "Checkout",
+    "increase": "Increase quantity",
+    "decrease": "Decrease quantity"
+  },
+  "aria": {
+    "openCart": "Open cart ({{count}} items)",
+    "myAccount": "My account",
+    "menu": "Menu",
+    "mainNav": "Main navigation",
+    "languageSwitcher": "Language"
+  }
+}

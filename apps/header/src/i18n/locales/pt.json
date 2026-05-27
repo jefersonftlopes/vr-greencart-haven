@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "service": "Serviços",
+    "product": "Produtos",
+    "contact": "Contato"
+  },
+  "cart": {
+    "title": "Meu Carrinho ({{count}})",
+    "empty": "Seu carrinho está vazio",
+    "addProductsToStart": "Adicione produtos para começar.",
+    "reviewBeforeClose": "Revise antes de fechar o pedido.",
+    "each": "cada",
+    "remove": "Remover",
+    "total": "Total",
+    "checkout": "Finalizar pedido",
+    "increase": "Aumentar quantidade",
+    "decrease": "Diminuir quantidade"
+  },
+  "aria": {
+    "openCart": "Abrir carrinho ({{count}} itens)",
+    "myAccount": "Minha conta",
+    "menu": "Menu",
+    "mainNav": "Navegação principal",
+    "languageSwitcher": "Idioma"
+  }
+}
