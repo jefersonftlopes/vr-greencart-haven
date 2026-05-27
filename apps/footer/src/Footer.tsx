@@ -1,26 +1,4 @@
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
-
-const COLUMNS = [
-  {
-    title: 'About',
-    items: ['Who we are', 'Privacy Policy', 'Careers', 'Press'],
-  },
-  {
-    title: 'Help',
-    items: ['Support', 'Help Center', 'Order Status', 'Shipping Info'],
-  },
-  {
-    title: 'Contact',
-    items: ['Terms & Conditions', 'Return & Exchange Policy', 'Suppliers', 'Wholesale'],
-  },
-];
-
-const SOCIAL = [
-  { Icon: Facebook, label: 'Facebook', href: '#' },
-  { Icon: Instagram, label: 'Instagram', href: '#' },
-  { Icon: Twitter, label: 'Twitter', href: '#' },
-  { Icon: Youtube, label: 'Youtube', href: '#' },
-];
+import { COLUMNS, SOCIAL } from "./constants/footer";
 
 export default function Footer() {
   return (

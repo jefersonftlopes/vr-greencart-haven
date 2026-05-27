@@ -7,8 +7,7 @@ import {
   useAppDispatch,
   useAppSelector,
 } from "@greencart/store";
-
-const DEFAULT_USER_ID = 1;
+import { DEFAULT_USER_ID } from "../constants/checkout";
 
 export function useCheckout(onOrderPlaced: (orderId: number) => void) {
   const dispatch = useAppDispatch();
