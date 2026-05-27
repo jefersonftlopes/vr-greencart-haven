@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+/* Escaneia todos os apps e packages do monorepo para gerar utilities corretamente
+   mesmo quando classes vivem em remotes que serão consumidos via Module Federation. */
+@source "../../../apps/host/src/**/*.{ts,tsx,html}";
+@source "../../../apps/host/index.html";
+@source "../../../apps/header/src/**/*.{ts,tsx,html}";
+@source "../../../apps/header/index.html";
+@source "../../../apps/footer/src/**/*.{ts,tsx,html}";
+@source "../../../apps/footer/index.html";
+@source "../../../apps/cards/src/**/*.{ts,tsx,html}";
+@source "../../../apps/cards/index.html";
+@source "../../../apps/checkout/src/**/*.{ts,tsx,html}";
+@source "../../../apps/checkout/index.html";
+@source "../../ui/src/**/*.{ts,tsx}";
+
+@theme {
+  /* Cores extraídas do Figma — Green Cart Haven */
+  --color-brand: #2e7d5b;
+  --color-brand-dark: #246348;
+  --color-brand-darker: #1c4e38;
+  --color-brand-light: #4a9c77;
+  --color-brand-accent: #f08775;
+  --color-brand-pink: #f4b6b0;
+  --color-brand-orange: #e8a87c;
+  --color-brand-yellow: #f1c40f;
+  --color-banner-mustard: #bfa425;
+  --color-surface: #f7f7f5;
+  --color-ink: #1f1f1f;
+  --color-ink-muted: #6b7280;
+  --color-footer: #2d2d2d;
+
+  --font-display: 'Poppins', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --radius-card: 12px;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; }
+}
