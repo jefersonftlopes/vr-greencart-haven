@@ -224,38 +224,47 @@ O store Redux é **singleton via Module Federation `shared`**, garantindo uma ú
 - `FilterDrawer` lateral com 3 dimensões: **Categoria** (chips da API real), **Ordenar por** (5 opções), **Ordem** (asc/desc)
 - Paginação completa com ellipsis (1 … 4 5 6 … 10) e suporte a teclado
 
-#### 6. Seções de marketing na home (Hero + Banners)
+#### 6. Rating com estrelas + Modal de avaliações
+- Componente `<Rating />` reutilizável (5 estrelas com suporte a meia estrela)
+- Posicionado no canto superior direito de cada `ProductCard`
+- **Clicável** — abre `ReviewsModal` centralizado com:
+  - Nota grande + resumo
+  - Lista de reviews com avatar (iniciais), nome, data formatada por idioma (`Intl.DateTimeFormat`), nota individual e comentário
+- Modal `<Modal variant="center">` adicionado no design system (drawer continua sendo o default)
+
+#### 7. Seções de marketing na home (Hero + Banners)
 - Hero com imagem e CTA
 - 3 banners destacados (BIG SALE / SUPER SALE / 20% DISCOUNT) idênticos ao Figma
 - Carrossel de categorias visuais com fotos reais
 
-#### 7. Header sticky
+#### 8. Header sticky
 - Acompanha o scroll em qualquer página (`position: sticky; top: 0; z-50`)
 
-#### 8. ARIA live region
+#### 9. ARIA live region
 - Anuncia "produto X adicionado ao carrinho" para leitores de tela ao clicar Adicionar
 
-#### 9. Acessibilidade reforçada
+#### 10. Acessibilidade reforçada
 - `aria-label`, `aria-pressed`, `aria-current`, `aria-live`, `aria-expanded` corretamente aplicados
 - Focus rings visíveis (`focus-visible:ring-2`)
 - Semantic HTML em todos os componentes
 - `decoding="async"` + `loading="lazy"` em imagens
 
-#### 10. Empty states
+#### 11. Empty states
 - Carrinho vazio com ícone e CTA
 - Lista de produtos vazia
 - Categoria sem resultados
+- Produto sem reviews
 
 ---
 
 ### 🧪 Engenharia de testes extra
 
-O teste pediu "Testes". Foram entregues **61 testes em 17 arquivos**:
+O teste pediu "Testes". Foram entregues **74 testes em 19 arquivos**:
 
 | Pacote | Arquivos | Testes |
 |---|---|---|
 | `@greencart/store` | 4 | 22 |
-| `@greencart/cards` | 3 | 12 |
+| `@greencart/cards` | 5 | 25 (ProductCard, Rating, ReviewsModal, Pagination, ProductList) |
 | `@greencart/header` | 3 | 9 |
 | `@greencart/checkout` | 3 | 13 |
 | `@greencart/footer` | 1 | 2 |
@@ -333,9 +342,11 @@ apps/header/src/
 
 apps/cards/src/
 ├── ProductList.tsx             # paginação + filtro
-├── ProductCard.tsx             # add-to-cart
+├── ProductCard.tsx             # add-to-cart + rating clicável
 ├── FilterDrawer.tsx            # Category + SortBy + Order
-├── components/Pagination.tsx
+├── components/
+│   ├── Pagination.tsx
+│   └── ReviewsModal.tsx        # 🌟 EXTRA: modal centralizado com reviews
 └── hooks/useProductList.ts
 
 apps/checkout/src/              # 🌟 EXTRA
@@ -357,9 +368,10 @@ packages/store/src/
 
 packages/ui/src/
 ├── Button.tsx
-├── Modal.tsx                   # Radix Dialog wrapper
+├── Modal.tsx                   # Radix Dialog wrapper (variant: drawer | center)
 ├── Skeleton.tsx
 ├── Badge.tsx
+├── Rating.tsx                  # estrelas (suporta meia estrela) + count
 ├── cn.ts                       # clsx + tailwind-merge
 └── styles.css                  # @theme tokens + @source paths
 ```
