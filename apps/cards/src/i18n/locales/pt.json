@@ -30,5 +30,13 @@
       "asc": "Crescente",
       "desc": "Decrescente"
     }
+  },
+  "reviews": {
+    "title": "Avaliações",
+    "summary": "Veja o que outros clientes acharam deste produto.",
+    "count_one": "{{count}} avaliação",
+    "count_other": "{{count}} avaliações",
+    "empty": "Nenhuma avaliação ainda.",
+    "openAria": "Ver avaliações de {{title}}"
   }
 }

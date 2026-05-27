@@ -57,4 +57,15 @@ describe("ProductCard", () => {
     // contagem de reviews entre parênteses
     expect(screen.getByText("(2)")).toBeInTheDocument();
   });
+
+  it("clicar na nota abre o modal de avaliações", async () => {
+    const user = userEvent.setup();
+    renderWithProviders(<ProductCard product={product} />);
+    await user.click(
+      screen.getByRole("button", { name: /ver avaliações de tomate cereja/i }),
+    );
+    expect(
+      screen.getByRole("heading", { name: /avaliações|reviews/i }),
+    ).toBeInTheDocument();
+  });
 });

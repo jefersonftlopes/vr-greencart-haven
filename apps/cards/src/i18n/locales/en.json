@@ -30,5 +30,13 @@
       "asc": "Ascending",
       "desc": "Descending"
     }
+  },
+  "reviews": {
+    "title": "Reviews",
+    "summary": "See what other customers thought of this product.",
+    "count_one": "{{count}} review",
+    "count_other": "{{count}} reviews",
+    "empty": "No reviews yet.",
+    "openAria": "See reviews for {{title}}"
   }
 }
