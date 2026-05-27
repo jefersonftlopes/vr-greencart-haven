@@ -1,0 +1,34 @@
+{
+  "products": {
+    "title": "Todos os Produtos",
+    "loading": "Carregando…",
+    "error": "Erro ao carregar produtos.",
+    "retry": "Tentar novamente",
+    "addToCart": "Adicionar",
+    "addedToCart": "adicionado ao carrinho",
+    "filter": "Filtrar",
+    "filters": "Filtros",
+    "filtersDescription": "Ordene e organize a listagem de produtos.",
+    "category": "Categoria",
+    "allCategories": "Todas as categorias",
+    "sortBy": "Ordenar por",
+    "sortOrder": "Ordem",
+    "resetFilters": "Redefinir Filtros",
+    "page": "Página",
+    "of": "de",
+    "prev": "Anterior",
+    "next": "Próxima",
+    "noProducts": "Nenhum produto encontrado.",
+    "sort": {
+      "title": "Nome",
+      "price": "Preço",
+      "rating": "Avaliação",
+      "stock": "Estoque",
+      "discountPercentage": "Desconto"
+    },
+    "order": {
+      "asc": "Crescente",
+      "desc": "Decrescente"
+    }
+  }
+}

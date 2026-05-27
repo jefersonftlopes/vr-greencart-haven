@@ -1,0 +1,34 @@
+{
+  "products": {
+    "title": "All Products",
+    "loading": "Loading…",
+    "error": "Error loading products.",
+    "retry": "Try again",
+    "addToCart": "Add to Cart",
+    "addedToCart": "added to cart",
+    "filter": "Filter",
+    "filters": "Filters",
+    "filtersDescription": "Sort and organise the product list.",
+    "category": "Category",
+    "allCategories": "All categories",
+    "sortBy": "Sort by",
+    "sortOrder": "Order",
+    "resetFilters": "Reset Filters",
+    "page": "Page",
+    "of": "of",
+    "prev": "Previous",
+    "next": "Next",
+    "noProducts": "No products found.",
+    "sort": {
+      "title": "Name",
+      "price": "Price",
+      "rating": "Rating",
+      "stock": "Stock",
+      "discountPercentage": "Discount"
+    },
+    "order": {
+      "asc": "Ascending",
+      "desc": "Descending"
+    }
+  }
+}
